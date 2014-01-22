@@ -6,6 +6,7 @@ zh-CN:
   common:
     menu:
       sitename: "名字"
+      login: "登录"
 
   front:
     index:
