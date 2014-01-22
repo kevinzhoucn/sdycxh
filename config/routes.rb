@@ -1,4 +1,13 @@
 RailsApp::Application.routes.draw do
+  resources :articles
+
+
+  resources :sub_categories
+
+
+  resources :categories
+
+
   get "front/index"
 
   # The priority is based upon order of creation:

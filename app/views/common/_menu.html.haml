@@ -3,3 +3,19 @@
     %a{href: "/"}= t('.sitename')
     .loginbox
       %a{href: "/login"}= t('.login')
+  .navbar
+    .navbar-inner.navsite
+      .container
+        %ul.nav
+          %li= link_to t(".frontpage"), '/', {class: "navlink"}
+          %li= link_to t(".frontpage2"), '/', {class: "navlink"}
+          %li.dropdown
+            %a.dropdown-toggle#dLabel{ role: "button", data: {toggle: "dropdown", target: "#"}, href: "/" }
+              %b.caret{style: "border-top:4px solid #F7EDED"}
+            %ul.dropdown-menu.pull-right.uldropdown{role: "menu", aria: {labelledby: "dLabel"}}
+              %li{role: "presentation"}
+                %a{href: "/", role: "menuitem", tabindex: "-1"} Hello
+              %li{role: "presentation"}
+                %a{href: "/", role: "menuitem", tabindex: "-1"} Hello
+          -Category.all.each do |cat|
+            %li= link_to cat.name, cat

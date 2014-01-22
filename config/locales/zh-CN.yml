@@ -7,6 +7,8 @@ zh-CN:
     menu:
       sitename: "名字"
       login: "登录"
+      frontpage: "首页"
+      frontpage2: "协会介绍"
 
   front:
     index:
