@@ -1,0 +1,27 @@
+.span7.well{style: "background-color: white"}
+  #myCarousel.carousel.slide{style: "max-width:670px;max-height:447px"}
+    %ol{class: 'carousel-indicators'}
+      %li{data: {target: "#myCarousel", slide_to: "0"}}
+      %li{data: {target: "#myCarousel", slide_to: "1"}}
+    %div{class: "carousel-inner"}
+      .item
+        =image_tag "slide-01.jpg", {alt: "Slide-01"}
+        .container
+          %div{class: "carousel-caption"}
+            %h1 Picture01
+            %p.lead Picture01
+      .item
+        =image_tag "slide-02.jpg", {alt: "Slide-02"}
+        .container
+          %div{class: "carousel-caption"}
+            %h1 Picture02
+            %p.lead Picture02
+    %a{class: "carousel-control left", href: "#myCarousel", data: {slide: "prev"}}
+    %a{class: "carousel-control right", href: "#myCarousel", data: {slide: "next"}}
+  :javascript    
+    $(function(){
+      $('#myCarousel').carousel({
+        interval: 5000
+      })
+    })
+    

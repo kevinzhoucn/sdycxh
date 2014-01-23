@@ -8,7 +8,9 @@ zh-CN:
       sitename: "名字"
       login: "登录"
       frontpage: "首页"
-      frontpage2: "协会介绍"
+      frontpage2: "一级菜单"
+      sub_menu1: "二级菜单"
+      registeronline: "在线报名"
 
   front:
     index:

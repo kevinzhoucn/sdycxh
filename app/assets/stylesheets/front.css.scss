@@ -6,6 +6,11 @@
   color: red;
 }
 
+.navlink {
+  color: white;
+  font-weight: bold;
+}
+
 .muted a {
   @extend .colorred;
   font-weight: bold;
@@ -56,8 +61,10 @@
 
 ul.nav li, ul.uldropdown li {
   a {
+    @extend .navlink;
+
     padding-right: 0px;
-    font-size: 110%
+    font-size: 110%;   
   }
   a:hover {
     color: white;
@@ -73,7 +80,3 @@ li.dropdown > a {
   padding-left: 2px;
 }
 
-.navlink {
-  color: white;
-  font-weight: bold;
-}

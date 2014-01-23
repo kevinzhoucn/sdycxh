@@ -40,7 +40,8 @@ class SubCategoriesController < ApplicationController
   # POST /sub_categories
   # POST /sub_categories.json
   def create
-    @sub_category = SubCategory.new(params[:sub_category])
+#    @sub_category = SubCategory.new(params[:sub_category])
+    @sub_category = Category.last.sub_categories.new(params[:sub_category])
 
     respond_to do |format|
       if @sub_category.save
