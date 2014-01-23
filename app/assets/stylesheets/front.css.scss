@@ -64,7 +64,7 @@ ul.nav li, ul.uldropdown li {
     @extend .navlink;
 
     padding-right: 0px;
-    font-size: 110%;   
+    font-size: 110%;
   }
   a:hover {
     color: white;
@@ -76,7 +76,14 @@ ul.nav > li {
   float: left;
 }
 
-li.dropdown > a {
-  padding-left: 2px;
+li.dropdown {  
+  a {
+    padding-left: 2px;
+  }
+
+  a:hover {
+    color: white;
+    background-color: transparent;
+  }
 }
 

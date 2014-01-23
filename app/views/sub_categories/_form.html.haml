@@ -9,5 +9,8 @@
   .field
     = f.label :name
     = f.text_field :name
+  .field
+    = f.label :category_id
+    = f.select :category_id, @categories.map{ |c| [c.name, c.id] }, prompt: "Select a category"
   .actions
     = f.submit 'Save'
