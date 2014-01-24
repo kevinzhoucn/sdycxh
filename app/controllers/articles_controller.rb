@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
+    @sub_categories = SubCategory.all
 
     respond_to do |format|
       format.html # new.html.erb
