@@ -16,8 +16,13 @@ zh-CN:
     index:
       title: "首页"
       publish: "发布"
+      recetn_activities: "近期动态"
     publish:
       select_category: "选择板块"
+  categories:
+    show:
+      title_article: "文章列表"
+      created_date: "创建日期"
 
   devise:
     sessions:

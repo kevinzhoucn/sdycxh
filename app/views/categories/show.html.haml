@@ -1,18 +1,31 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @category.name
-
-= link_to 'Edit', edit_category_path(@category)
-\|
-= link_to 'Back', categories_path
-
-
-%table
-  %tr
-    %th Title
-  - @category.articles.each do |art|
+.span7.well
+  %h2= @category.name
+  %table.plist    
     %tr
-      %td= art.title
+      %th= t(".title_article")
+      %th= t(".created_date")
+
+    - @category.articles.each do |art|
+      %tr.content{class: cycle('list_line_odd', 'list_line_even')}
+        %td{style: "width:70%"}= link_to art.title, art, html_options = { class: "font14" }
+        %td= art.created_at.strftime('%Y-%m-%d').to_s
+
+
+/ %p#notice= notice
+
+/ %p
+/   %b Name:
+/   = @category.name
+
+/ = link_to 'Edit', edit_category_path(@category)
+/ \|
+/ = link_to 'Back', categories_path
+
+
+/ %table
+/   %tr
+/     %th Title
+/   - @category.articles.each do |art|
+/     %tr
+/       %td= art.title
 
