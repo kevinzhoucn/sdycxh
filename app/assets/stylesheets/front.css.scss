@@ -58,6 +58,10 @@
   margin: 15px;
 }
 
+.tablecolor {
+  background: rgb(245, 234, 234);
+}
+
 .loginbox {
   float: right;
   font-size: 50%;
@@ -137,7 +141,6 @@ li.dropdown {
 .list_line_even{
 }
 
-
 table.plist {
   display: table;
   border-collapse: separate;
@@ -153,7 +156,8 @@ table.plist {
 
   th {
     font-size: 14px;
-    padding-left: 5px;
+    padding: 5px;
+    border-bottom: solid 1px #AAAAAA;
   }
 
   tr {

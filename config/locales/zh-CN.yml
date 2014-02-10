@@ -23,6 +23,11 @@ zh-CN:
     show:
       title_article: "文章列表"
       created_date: "创建日期"
+      articles_empty: "文章列表为空"
+  articles:
+    index:
+      title_article: "所有文章列表"
+      created_date: "创建日期"
 
   devise:
     sessions:
