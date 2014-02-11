@@ -1,9 +1,19 @@
 RailsApp::Application.routes.draw do
-  resources :articles
-  resources :sub_categories
-  resources :categories
+  devise_for :users, :path => "/", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification'}#, :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
 
   get "front/index"
+  get "front/admin", :as=>"front_admin"
+
+  resources :categories, only: [:show]
+  resources :sub_categories, only: [:show]
+
+  resources :articles, only: [:show, :index]
+
+  namespace 'admin' do
+    resources :articles
+    resources :categories
+    resources :sub_categories
+  end  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

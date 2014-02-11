@@ -175,3 +175,24 @@ table.plist {
 .tdhover {
   background-color: #EFF8C0;
 }
+
+.simple_form.new_user {
+  div {
+    margin: 10px;
+  }
+  label {
+    width: 15%;
+  }
+  .form-actions {
+    .button {
+      margin: auto;
+    }
+  }
+}
+
+ul.nav-list {
+  li {
+    padding: 5px;    
+    list-style: none;
+  }
+}

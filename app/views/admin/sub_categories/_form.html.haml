@@ -1,0 +1,5 @@
+- simple_form_for [:admin, @category], { :class => 'span6 form-horizontal well'} do |f|
+  = f.input :name, label: "菜单名称"
+  = f.collection_select :category_id, @categories, :id, :name
+  = f.submit "保存", class: "btn btn-primary btn-large"
+  = link_to "取消", admin_front_path, class: "btn btn-info"
