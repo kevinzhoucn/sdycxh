@@ -176,12 +176,15 @@ table.plist {
   background-color: #EFF8C0;
 }
 
-.simple_form.new_user {
+.simple_form {
   div {
     margin: 10px;
   }
   label {
     width: 15%;
+  }
+  select {
+    width: 30%;
   }
   .form-actions {
     .button {

@@ -33,7 +33,6 @@ class Admin::SubCategoriesController < Admin::BaseController
     end
   end
 
-  # GET /categories/1/edit
   def edit
     @sub_category = SubCategory.find(params[:id])
     @categories = Category.all
@@ -61,12 +60,12 @@ class Admin::SubCategoriesController < Admin::BaseController
     @sub_category = SubCategory.find(params[:id])
 
     respond_to do |format|
-      if (not @category.own_id.present?) && @category.update_attributes(params[:category])
-        format.html { redirect_to @category, notice: '成功更新类别名称.' }
+      if @sub_category.update_attributes(params[:sub_category])
+        format.html { redirect_to @sub_category, notice: '成功更新类别名称.' }
         format.json { head :no_content }
       else
-        format.html { redirect_to front_admin_url, notice: "无法修改系统类别,只能修改自定义类别" }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
+        format.html { redirect_to front_admin_url, notice: "无法修改类别" }
+        format.json { render json: @sub_category.errors, status: :unprocessable_entity }
       end
     end
   end
