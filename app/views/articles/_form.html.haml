@@ -6,19 +6,23 @@
         - @article.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :title
+    = f.label :title, "标题"
+    %br
     = f.text_field :title
   .field
-    = f.label :content
+    = f.label :content, "内容"
+    %br
     = f.text_area :content
   .field
-    = f.label :category_id
-    = f.select :category_id, @categories.map{ |c| [c.name, c.id] }, prompt: "Select a category"
+    = f.label :category_id, "类别"
+    %br
+    = f.select :category_id, @categories.map{ |c| [c.name, c.id] }, prompt: "选择类别"
   .field
-    = f.label :sub_category_id
-    = f.select :sub_category_id, @sub_categories.map{ |c| [c.name, c.id] }, prompt: "Select a Sub Category"
+    = f.label :sub_category_id, "下拉菜单"
+    %br
+    = f.select :sub_category_id, @sub_categories.map{ |c| [c.name, c.id] }, prompt: "选择下拉菜单"
   .field
-    = f.label :published
+    = f.label :published, "是否发布"
     = f.check_box :published
   .actions
-    = f.submit 'Save'
+    = f.submit '保存'
