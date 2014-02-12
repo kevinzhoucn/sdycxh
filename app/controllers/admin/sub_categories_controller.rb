@@ -41,12 +41,12 @@ class Admin::SubCategoriesController < Admin::BaseController
   # POST /categories
   # POST /categories.json
   def create
-    @sub_category = SubCategory.new(params[:category])
+    @sub_category = SubCategory.new(params[:sub_category])
 
     respond_to do |format|
-      if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
-        format.json { render json: @category, status: :created, location: @category }
+      if @sub_category.save
+        format.html { redirect_to front_admin_url, notice: '成功创建类别.' }
+        format.json { render json: @sub_category, status: :created, location: @sub_category }
       else
         format.html { render action: "new" }
         format.json { render json: @category.errors, status: :unprocessable_entity }
@@ -61,7 +61,7 @@ class Admin::SubCategoriesController < Admin::BaseController
 
     respond_to do |format|
       if @sub_category.update_attributes(params[:sub_category])
-        format.html { redirect_to @sub_category, notice: '成功更新类别名称.' }
+        format.html { redirect_to front_admin_url, notice: '成功更新类别名称.' }
         format.json { head :no_content }
       else
         format.html { redirect_to front_admin_url, notice: "无法修改类别" }

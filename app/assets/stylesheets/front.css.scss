@@ -27,6 +27,7 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   min-width: 1000px;
+  background-repeat: repeat-x;
 }
 
 .span3 {
@@ -107,7 +108,7 @@
   }
 }
 
-ul.nav li, ul.uldropdown li {
+ul.nav >li, ul.uldropdown >li {
   a {
     @extend .navlink;
 
@@ -199,3 +200,4 @@ ul.nav-list {
     list-style: none;
   }
 }
+
