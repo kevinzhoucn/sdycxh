@@ -1,5 +1,6 @@
 RailsApp::Application.routes.draw do
-  devise_for :users, :path => "/", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification'}#, :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
+#  devise_for :users, :path => "/", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification'}#, :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
+  devise_for :users, only: [:session], :path => '/', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
 
   get "front/index"
   get "front/admin", :as=>"front_admin"
@@ -13,7 +14,7 @@ RailsApp::Application.routes.draw do
     resources :articles
     resources :categories
     resources :sub_categories
-  end  
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
