@@ -201,3 +201,17 @@ ul.nav-list {
   }
 }
 
+#footer {
+  width: 100%;
+  margin: auto;
+  .maintain {
+    margin: auto;
+    ul {
+      list-style: none;
+      li {
+        float: left;
+        padding: 5px;
+      }
+    }
+  }
+}
