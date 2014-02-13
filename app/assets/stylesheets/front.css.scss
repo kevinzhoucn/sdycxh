@@ -204,14 +204,22 @@ ul.nav-list {
 #footer {
   width: 100%;
   margin: auto;
-  .maintain {
-    margin: auto;
-    ul {
-      list-style: none;
-      li {
-        float: left;
-        padding: 5px;
-      }
+  ul 
+  {
+    list-style: none;
+    text-align: -webkit-center;
+    li {
+      padding: 5px;
     }
+  }
+
+  .maintain {
+    width: 50%;
+    margin: auto;
+  }
+
+  .address {
+    width: 50%;
+    margin: auto;
   }
 }
