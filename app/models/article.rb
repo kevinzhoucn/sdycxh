@@ -3,6 +3,8 @@ class Article < ActiveRecord::Base
   belongs_to :category
   belongs_to :sub_category
 
+  default_scope :order => "created_at DESC"
+
   def self.recent
     Article.where(published: true).limit(20)
   end

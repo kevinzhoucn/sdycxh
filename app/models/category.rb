@@ -14,4 +14,8 @@ class Category < ActiveRecord::Base
       end
     end
   end
+
+  def pub_articles
+    self.articles.where( published: true)
+  end
 end

@@ -1,6 +1,6 @@
 <h1>文章列表</h1>
 <br />
-<% link_to 'New Article', new_admin_article_path %>
+<%= link_to 'New Article', new_admin_article_path %>
 
 <table class="table table-striped span8">
   <tr>    
@@ -13,7 +13,7 @@
 <% @articles.each do |article| %>
   <tr>    
     <td><%= article.title %></td>
-    <td><%= article.published_at.strftime('%Y-%m-%d %H:%M:%S').to_s %></td>
+    <td><%#= article.published_at.strftime('%Y-%m-%d %H:%M:%S').to_s %></td>
     <td><% article.category_id %></td>
     <td><%= link_to '查看', admin_article_path(article) %>    
     <%= link_to '编辑', edit_admin_article_path(article) %>
